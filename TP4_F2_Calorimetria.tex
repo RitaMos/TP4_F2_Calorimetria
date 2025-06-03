@@ -1,0 +1,157 @@
+% ******************************
+%* FILE CONFIGURATION
+% ******************************
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[spanish, es-tabla]{babel} % Enables Spanish language support and table naming
+\usepackage{hyperref}                 % Enables creation of hyperlinks in the document
+\usepackage{apacite}                  % Enables bibliography management
+\usepackage{graphicx}                 % Enables inclusion of images and figures
+\usepackage{multirow}                 % Provides multirow functionality for tables
+\usepackage{float}                    % Provides better control for floating elements like tables and figures
+\usepackage{fancyhdr}                 % Allows customization of headers and footers
+
+% Sets page margins
+\usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}                            % Clears all header and footer fields
+\fancyfoot[C]{\thepage}               % Centers the page number at the footer
+\renewcommand{\headrulewidth}{0pt}    % Removes the header line
+\renewcommand{\footrulewidth}{0pt}    % Removes the footer line
+
+\fancypagestyle{plain}                % Forces the same style on first page
+{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\setlength{\arrayrulewidth}{0.5mm}    % Adjusts table bstep width
+\setlength{\tabcolsep}{5pt}           % Adjusts spacing between table columns
+
+\def\tablename{Tabla}                 % Changes the name of the table caption
+
+% Creates a custom numbered step command (with bold numbers)
+\newcounter{step}
+\newcommand{\step}[1]
+{
+  \par\vspace{2ex}
+  \stepcounter{step}
+  \noindent\textbf{\arabic{step}.} #1\par\vspace{1ex}
+}
+
+% Creates a custon numbered step command (without bold numbers)
+\newcounter{normalstep}
+\newcommand{\normalstep}[1]
+{
+  \par\vspace{1ex}
+  \stepcounter{normalstep}
+  \noindent{\arabic{normalstep}.} #1\par\vspace{1ex}
+}
+
+
+% ******************************
+%* PSEUDO-CARATULA
+% ******************************
+
+\title{TP 4: Calorimetría}
+\author
+{
+  Caorsi Juan Ignacio, \href{jcaorsi@itba.edu.ar}{jcaorsi@itba.edu.ar} \\
+  Dib Ian, \href{idib@itba.edu.ar}{idib@itba.edu.ar} \\
+  Moschini Rita, \href{rmoschini@itba.edu.ar}{rmoschini@itba.edu.ar} \\
+  Tamagnini Ana, \href{atamagnini@itba.edu.ar}{atamagnini@itba.edu.ar}
+}
+
+\date{Grupo 4 - 13/05/2025}
+
+\begin{document}
+\maketitle
+
+\begin{equation}
+    T_{eq} = \frac{C_A T_A + C_B T_B}{C_A + C_B}
+\end{equation}
+C = mc
+\begin{equation}
+    \Delta Q = mc (T_f - T_i),
+\end{equation}
+
+
+
+% ******************************
+%* SECCION 1
+% ******************************
+\section{Determinación de la Capacidad Calorífica del Calorímetro}
+En la siguiente tabla,
+\begin{itemize}
+    \item $T_0$: temperatura ambiental
+    \item $m_1$: masa de agua cuya temperatura es 10°C menor que $T_0$ previamente a colocarla en el calorímetro.
+    \item $T_1$: temperatura de la masa $m_1$ medida dentro del calorímetro una vez alcanzado el equilibrio térmico.
+    \item $m_2$: masa de agua cuya temperatura es 20°C mayor que $T_0$ previamente a colocarla en el calorímetro.
+    \item $T_2$: temperatura de la masa $m_2$ de agua antes de colocarla en el calorímetro.
+    \item $T_{eq}$: temperatura de equilibrio alcanzada dentro del calorímetro una vez colocadas y agitadas las masas $m_1$ y $m_2$.
+\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textit{$m_1$ (g)} & \textit{$T_1$ (°C)} & \textit{$m_2$ (g)} & \textit{$T_2$ (°C)} & \textit{$T_{eq}$ (°C)} \\
+\hline
+& & & & \\
+\hline
+\end{tabular}
+\caption{Tabla 1: Mediciones registradas para la determinación de la capacidad calorífica del calorímetro}
+\end{table}
+
+\begin{equation}
+    \Delta Q = C \Delta T
+\end{equation}
+
+\begin{equation}
+    (m_1 + \pi) c_{\text{agua}} (T_{eq} - T_1) + m_2 c_{\text{agua}} (T_{eq} - T_2) = 0,
+\end{equation}
+
+\noindent donde $\pi$ es el equivalente en agua del calorímetro, por lo que despejando tenemos que:
+
+\begin{equation}
+    \pi = \frac{m_2 (T_2 - T_{eq})}{T_{eq} - T_1} - m_1.
+\end{equation}
+
+
+
+% ******************************
+%* SECCION 2
+% ******************************
+\section{Determinación del Calor Específico de un Sólido}
+
+\begin{itemize}
+    \item $m_A$: masa de agua.
+    \item $T_A$: temperatura de la masa $m_A$, aproximadamente igual a la temperatura ambiente.
+    \item $m_C$: masa del cuerpo que se sumerge en el agua $m_A$.
+    \item $T_C$: temperatura a la que se calienta la masa $m_C$
+    \item $T_{eq}$: COMPLETAR
+\end{itemize}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ & \textit{$m_A$ (g)} & \textit{$T_A$ (°C)} & \textit{$m_C$ (g)} & \textit{$T_C$ (°C)} & \textit{$T_{eq}$ (°C)} \\
+\hline
+cuerpo 1 & & & & & \\
+\hline
+cuerpo 2 & & & & & \\
+\hline
+\end{tabular}
+\caption{Mediciones registradas para la determinación del calor específico de dos sólidos desconocidos.}
+\end{table}
+
+Al llegar al equilibrio térmico se tiene que:
+\begin{equation}
+    (m_A + \pi) c_a (T_{eq} - T_A) + m_C c_C (T_{eq} - T_C) = 0,
+\end{equation}
+
+\end{document}
