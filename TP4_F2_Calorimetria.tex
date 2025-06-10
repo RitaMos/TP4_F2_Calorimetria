@@ -70,21 +70,13 @@
 \begin{document}
 \maketitle
 
-\begin{equation}
-    T_{eq} = \frac{C_A T_A + C_B T_B}{C_A + C_B}
-\end{equation}
-C = mc
-\begin{equation}
-    \Delta Q = mc (T_f - T_i),
-\end{equation}
-
-
 
 % ******************************
 %* SECCION 1
 % ******************************
 \section{Determinación de la Capacidad Calorífica del Calorímetro}
-En la siguiente tabla,
+Esta primera parte de la experiencia tiene como objetivo la determinación de la capacidad calorífica del calorímetro. Para lograrlo, se busca calcular su masa equivalente $\pi$, la cual representa cuál tendría que ser el valor de la masa del calorímetro si el mismo estuviera hecho de agua para que absorba la cantidad de calor que absorbió, es decir cuánta masa de agua absorbe la cantidad de calor que absorbió el calorímetro.
+\par Se obtuvo este valor mezclando dos masas de agua dentro del calorímetro (una 10°C más fría que el ambiente y otra 20°C más caliente). Luego, se midió la temperatura de equilibrio. Los valores registrados se pueden observar en la tabla 1, donde
 \begin{itemize}
     \item $T_0$: temperatura ambiental
     \item $m_1$: masa de agua cuya temperatura es 10°C menor que $T_0$ previamente a colocarla en el calorímetro.
@@ -93,31 +85,39 @@ En la siguiente tabla,
     \item $T_2$: temperatura de la masa $m_2$ de agua antes de colocarla en el calorímetro.
     \item $T_{eq}$: temperatura de equilibrio alcanzada dentro del calorímetro una vez colocadas y agitadas las masas $m_1$ y $m_2$.
 \end{itemize}
+
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \textit{$m_1$ (g)} & \textit{$T_1$ (°C)} & \textit{$m_2$ (g)} & \textit{$T_2$ (°C)} & \textit{$T_{eq}$ (°C)} \\
 \hline
-& & & & \\
+159 & 13,3 & 158 & 36,6 & 24,6 \\
 \hline
 \end{tabular}
-\caption{Tabla 1: Mediciones registradas para la determinación de la capacidad calorífica del calorímetro}
+\caption{Mediciones registradas para la determinación de la capacidad calorífica del calorímetro}
 \end{table}
 
+Realizando el siguiente despeje se obtiene la masa equivalente:
 \begin{equation}
-    \Delta Q = C \Delta T
+    \Delta Q_1 + \Delta Q_{calorimetro} + \Delta Q_2 = 0
 \end{equation}
 
 \begin{equation}
-    (m_1 + \pi) c_{\text{agua}} (T_{eq} - T_1) + m_2 c_{\text{agua}} (T_{eq} - T_2) = 0,
+    (m_1 + \pi) c_{agua} (T_{eq} - T_1) + m_2 c_{agua} (T_{eq} - T_2) = 0
 \end{equation}
-
-\noindent donde $\pi$ es el equivalente en agua del calorímetro, por lo que despejando tenemos que:
 
 \begin{equation}
     \pi = \frac{m_2 (T_2 - T_{eq})}{T_{eq} - T_1} - m_1.
 \end{equation}
+
+\begin{center}
+    $ \pi = 153g \cdot \frac{36,6 ^\circ C - 24,6 ^\circ C }{24,6 ^\circ C - 13,3 ^\circ C } - 159g $
+\end{center}
+
+\begin{center}
+    $ \pi = 3,478 g $
+\end{center}
 
 
 
@@ -125,15 +125,15 @@ En la siguiente tabla,
 %* SECCION 2
 % ******************************
 \section{Determinación del Calor Específico de un Sólido}
+Con el fin de determinar el calor específico de un sólido, se coloca una masa $m_A$ de agua dentro del calorímetro junto con el cuerpo de masa $m_C$ cuya capacidad calorífica se desea determinar; a este último se lo colocó completamente sumergido. Este procedimiento fue repetido para dos cuerpos.
 
 \begin{itemize}
     \item $m_A$: masa de agua.
     \item $T_A$: temperatura de la masa $m_A$, aproximadamente igual a la temperatura ambiente.
     \item $m_C$: masa del cuerpo que se sumerge en el agua $m_A$.
     \item $T_C$: temperatura a la que se calienta la masa $m_C$
-    \item $T_{eq}$: COMPLETAR
+    \item $T_{eq}$: temperatura de equilibrio alcanzada dentro del calorímetro una vez colocadas y agitadas las masas $m_A$ y $m_C$.
 \end{itemize}
-
 
 \begin{table}[h!]
 \centering
@@ -141,17 +141,53 @@ En la siguiente tabla,
 \hline
  & \textit{$m_A$ (g)} & \textit{$T_A$ (°C)} & \textit{$m_C$ (g)} & \textit{$T_C$ (°C)} & \textit{$T_{eq}$ (°C)} \\
 \hline
-cuerpo 1 & & & & & \\
+cuerpo 1 & 132 & 24,5 & 84 & 101 & 28,6 \\
 \hline
-cuerpo 2 & & & & & \\
+cuerpo 2 & 124 & 21,1 & 27 & 101 & 24,7 \\
 \hline
 \end{tabular}
 \caption{Mediciones registradas para la determinación del calor específico de dos sólidos desconocidos.}
 \end{table}
 
-Al llegar al equilibrio térmico se tiene que:
+
+Al llegar al equilibrio térmico se tiene que
 \begin{equation}
-    (m_A + \pi) c_a (T_{eq} - T_A) + m_C c_C (T_{eq} - T_C) = 0,
+    (m_A + \pi) c_a (T_{eq} - T_A) + m_C c_C (T_{eq} - T_C) = 0
 \end{equation}
+Luego, despejando $c_C$
+\begin{equation}
+    c_C = \frac{ - (m_A + \pi) \cdot c_A \cdot (T_{eq} - T_A) }{ m_C \cdot (T_{eq} - T_C) }
+\end{equation}
+
+Para el cuerpo 1 (hecho de bronce):
+\begin{center}
+    $ c_C = \frac{ - (132g + 3,478g) \cdot 1 \frac{cal}{g \cdot ^\circ C} \cdot (28,6^\circ C - 24,5^\circ C) }{ 84g \cdot (28,6^\circ C - 101^\circ C) } $
+\end{center}
+\begin{center}
+    $ c_C = 0,091334 \frac{cal}{g \cdot ^\circ C} $
+\end{center}
+
+Siendo $ 0,086 \frac{cal}{g \cdot ^\circ C} $ el valor teórico, el error relativo resulta
+\begin{center}
+    $ E_r =  \frac{|0,086-0,091334|}{|0,091334|}\cdot 100 = 6,2 \% $
+\end{center}
+
+Para el cuerpo 2 (hecho de aluminio):
+\begin{equation}
+    c_C = \frac{ - (124g + 3,478g) \cdot 11 \frac{cal}{g \cdot ^\circ C} \cdot (24,7^\circ C - 21,1^\circ C) }{ 27g \cdot (24,7^\circ C - 101^\circ C) }
+\end{equation}
+\begin{center}
+    $ c_C = 0,222766 \frac{cal}{g \cdot ^\circ C} $
+\end{center}
+Siendo $ 0,216 \frac{cal}{g \cdot ^\circ C} $ el valor teórico, el error relativo resulta
+\begin{center}
+    $ E_r =  \frac{|0,216-0,222766|}{|0,216|}\cdot 100 = 3,13 \% $
+\end{center}
+
+Dado que ambos errores son menores al 10\%, se considera que las mediciones son buenas y que podría deducirse el material de los cuerpos a partir de las mismas.
+
+\bibliographystyle{apacite}           % Follows APA style
+\bibliography{bibliography} 
+Valores teóricos obtenidos de este \href{https://www.educamix.com/educacion/3_eso_materiales/prof/bloque_ii/tablas_d_te_tf_internet.pdf}{enlace} (hacer click en la palabra enlace).
 
 \end{document}
