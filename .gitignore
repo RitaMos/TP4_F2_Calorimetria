@@ -1,0 +1,14 @@
+# === LaTeX auxiliary files ===
+*.aux
+*.fls
+*.log
+*.out
+*.dvi
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+
+# === Editors ===
+# VSCode
+.vscode/
